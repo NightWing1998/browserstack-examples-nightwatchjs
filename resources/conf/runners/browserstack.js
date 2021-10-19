@@ -23,6 +23,7 @@ const launchUrl =
 const browserstackRunConfig = {
 	launch_url: launchUrl,
 	globals: { bsEnv: true },
+	proxy: process.env.http_proxy || process.env.https_proxy || process.env.HTTP_PROXY || process.env.HTTPS_PROXY
 };
 
 for (let key in bsConfig) {
